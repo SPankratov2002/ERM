@@ -28,7 +28,7 @@ class ResourceSummarySerializer(serializers.ModelSerializer):
 
 
 class ResourceSerializer(serializers.ModelSerializer):
-    owner = EmployeeSerializer(read_only=True)  # Используйте EmployeeSerializer для полного представления владельца
+    owner = EmployeeSerializer(read_only=True)
     access_granted_to = EmployeeSerializer(many=True, read_only=True)
 
     class Meta:
