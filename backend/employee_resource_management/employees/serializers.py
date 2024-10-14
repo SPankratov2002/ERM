@@ -22,7 +22,6 @@ class EmployeeSerializer(serializers.ModelSerializer):
 
 
 class ResourceSummarySerializer(serializers.ModelSerializer):
-    """Сериализатор для краткого представления ресурсов, чтобы избежать рекурсии"""
     class Meta:
         model = Resource
         fields = ['id', 'name']
