@@ -25,7 +25,7 @@ class Department(models.Model):
 
 class Employee(models.Model):
     name = models.CharField(max_length=255)
-    email = models.EmailField()  # Добавлено поле email для корректной работы метода clean
+    email = models.EmailField()
     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='employees')
     is_access_restricted = models.BooleanField(default=False)
     restricted_employees = models.ManyToManyField('self', symmetrical=False, related_name='restricted_by', blank=True)
